@@ -1,0 +1,220 @@
+
+// Default Application Palette (duplicated for visual inspection of colors in IDEA).
+$_mdlapp-text-color-primary:      rgba(#000000, 0.87) !default;  // text color on content (paper/card) background
+$_mdlapp-text-color-secondary:    rgba(#000000, 0.54) !default;  // text color on content (paper/card) background
+$_mdlapp-text-color-disabled:     rgba(#000000, 0.38) !default;  // disabled text, hint text, and icons
+$_mdlapp-divider-color:           rgba(#000000, 0.12) !default;  // -> $card-border-color
+$_mdlapp-color-primary:           #2196F3 !default;
+$_mdlapp-color-primary-dark:      #1976D2 !default;
+$_mdlapp-color-primary-contrast:  #FFFFFF !default;  // text color on primary/primary dark background
+$_mdlapp-color-accent:            #607D8B !default;
+$_mdlapp-color-accent-contrast:   #FFFFFF !default;
+
+$mdlapp-text-color-primary:       "0,0,0";
+$mdlapp-color-primary:            "33,150,243";
+$mdlapp-color-primary-dark:       "25,118,210";
+$mdlapp-color-primary-contrast:   "255,255,255";
+$mdlapp-color-accent:             "96,125,139";
+$mdlapp-color-accent-contrast:    "255,255,255";
+
+/* -----------------------------------------------
+ * Override Material Design Lite variables
+ * ----------------------------------------------- */
+
+/* ==========  TYPOGRAPHY  ========== */
+/* We're splitting fonts into "preferred" and "performance" in order to optimize
+   page loading. For important text, such as the body, we want it to load
+   immediately and not wait for the web font load, whereas for other sections,
+   such as headers and titles, we're OK with things taking a bit longer to load.
+   We do have some optional classes and parameters in the mixins, in case you
+   definitely want to make sure you're using the preferred font and don't mind
+   the performance hit.
+   We should be able to improve on this once CSS Font Loading L3 becomes more
+   widely available.
+*/
+$preferred_font: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+//$preferred_font: "Times New Roman", Times,'Helvetica', 'Arial', sans-serif;
+$performance_font: 'Helvetica', 'Arial', sans-serif;
+
+/* ==========  IMAGES  ========== */
+
+/* ==========  Color & Themes  ========== */
+$color-primary: $mdlapp-color-primary;
+$color-primary-dark: $mdlapp-color-primary-dark;
+$color-accent: $mdlapp-color-accent;
+$color-primary-contrast: $mdlapp-color-primary-contrast;
+$color-accent-contrast: $mdlapp-color-accent-contrast;
+
+
+/* ==========  Typography  ========== */
+// We use the following default color styles: text-color-primary and
+// text-color-secondary. For light themes, use text-color-primary-inverse
+// and text-color-secondary-inverse.
+$text-color-primary: unquote("rgba(#{$mdlapp-text-color-primary}, 0.87)");
+$text-link-color: unquote("rgb(#{$color-accent})");
+
+
+/* ==========  Components  ========== */
+
+/* ==========  Standard Buttons  ========== */
+
+/* ==========  Icon Toggles  ========== */
+$icon-toggle-checked-color: unquote("rgb(#{$color-accent})");
+$icon-toggle-checked-focus-color: unquote("rgba(#{$color-accent}, 0.26)");
+
+/* ==========  Radio Buttons  ========== */
+$radio-color: unquote("rgb(#{$color-accent})");
+
+/* ==========  Ripple effect  ========== */
+
+
+/* ==========  Layout  ========== */
+
+// Drawer
+$layout-drawer-navigation-link-active-background: rgba(0, 0, 0, 0.25);
+$layout-drawer-navigation-link-active-color: unquote("rgb(#{$color-primary-dark})");
+
+// Header
+$layout-header-text-color: rgba(0, 0, 0, 0.9);
+
+
+/* ==========  Content Tabs  ========== */
+
+/* ==========  Checkboxes  ========== */
+$checkbox-color: unquote("rgb(#{$color-accent})");
+$checkbox-focus-color: unquote("rgba(#{$color-accent}, 0.26)");
+
+/* ==========  Switches  ========== */
+$switch-color: unquote("rgb(#{$color-accent})");
+$switch-faded-color: unquote("rgba(#{$color-accent}, 0.26)");
+$switch-thumb-color: $switch-color;
+$switch-track-color: unquote("rgba(#{$color-accent}, 0.5)");
+
+
+/* ==========  Spinner  ========== */
+
+/* ==========  Text fields  ========== */
+$input-text-highlight-color: unquote("rgb(#{$color-accent})");
+
+/* ==========  Card  ========== */
+$card-image-placeholder-color: rgba(255, 255, 255, 0);
+
+// $card-text-color is only applied to .mdl-card__title.
+// Other text colors are inherited
+
+/* ==========  Sliders ========== */
+$range-color: unquote("rgb(#{$color-accent})");
+$range-faded-color: unquote("rgba(#{$color-accent}, 0.26)");
+
+/* ========== Progress ========== */
+$progress-main-color: unquote("rgb(#{$color-accent})");
+$progress-secondary-color: unquote("rgba(#{$color-accent-contrast}, 0.7)");
+$progress-fallback-buffer-color: unquote("rgba(#{$color-accent-contrast}, 0.9)");
+
+/* ==========  List ========== */
+
+/* ==========  Item ========== */
+
+// Default Item Colors
+
+/* ==========  Dropdown menu ========== */
+
+
+/* ==========  Tooltips  ========== */
+$tooltip-background-color: rgba(#353535, 0.9);
+
+/* ==========  Footer  ========== */
+
+/* TEXTFIELD */
+
+/* SWITCH */
+
+/* SPINNER */
+
+/* RADIO */
+
+/* MENU */
+
+/* LIST */
+$list-border: 0;
+$list-bottom-padding: 16px;
+$list-avatar-text-left-distance: 64px;
+$list-icon-text-left-distance: 56px;
+$list-avatar-size: 32px;
+$list-two-line-height: 64px;
+
+/* LAYOUT */
+$layout-header-desktop-indent: 16px;
+
+/* ICON TOGGLE */
+
+/* FOOTER */
+
+
+/* CHECKBOX */
+$checkbox-button-size: 18px;
+
+/* CARD */
+/* Card dimensions */
+$card-height: auto;
+$card-width: auto;
+$card-title-font-size: 24px;
+$card-title-text-font-weight: 400;
+$card-vertical-padding: 20px;
+
+/* BUTTON */
+$button-font-weigth: 400;
+
+/* ANIMATION */
+
+/* PROGRESS */
+
+/* BADGE */
+
+/* SHADOWS */
+
+/* GRID */
+$grid-desktop-gutter: 6px;
+$grid-desktop-margin: 6px;
+
+$grid-tablet-gutter: 4px;
+$grid-tablet-margin: 4px;
+
+$grid-phone-gutter: 2px;
+$grid-phone-margin: 2px;
+
+/* DATA TABLE */
+$data-table-column-spacing: 16px;
+
+/* DIALOG */
+
+/* SNACKBAR */
+
+/* TOOLTIP */
+$tooltip-font-size: 12px;
+
+
+// -----------------------------------------------
+// Override Bordered fields variables.
+// -----------------------------------------------
+
+
+// -----------------------------------------------
+// Override Color Themes variables
+// -----------------------------------------------
+$mdlext-light-color-primary:          #9E9E9E;
+$mdlext-light-color-primary-dark:     #616161;
+$mdlext-light-color-primary-light:    #9E9E9E;  // Fallback color. Set to color-primary if fallback is not needed
+$mdlext-light-color-primary-contrast: #F5F5F5;  // text color on primary/primary dark background
+$mdlext-light-color-accent:           #FF5722;
+$mdlext-light-color-accent-light:     #FF5722;  // Fallback color. Set to color-accent if fallback is not needed
+$mdlext-light-color-accent-contrast:  #FFFFFF;
+
+
+$mdlext-dark-color-primary:           #212121;
+$mdlext-dark-color-primary-dark:      #000000;
+$mdlext-dark-color-primary-light:     rgb(30,136,229);  // Fallback color. Set to color-primary if fallback is not needed
+$mdlext-dark-color-primary-contrast:  #FFFFFF;  // text color on primary/primary dark background
+$mdlext-dark-color-accent:            #FFC107;
+$mdlext-dark-color-accent-light:      #FFC107;  // Fallback color. Set to color-accent if fallback is not needed
+$mdlext-dark-color-accent-contrast:   #FFFFFF;

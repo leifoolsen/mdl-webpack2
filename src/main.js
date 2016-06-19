@@ -1,3 +1,7 @@
+import './main.scss';
+import 'eq.js';
+import 'material-design-lite/material';
+import 'mdl-ext';
 
 class App {
 
