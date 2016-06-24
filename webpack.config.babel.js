@@ -64,7 +64,7 @@ module.exports = env => {
           loader: ExtractTextPlugin.extract('style-loader', css_)
         },
         // Images
-        // inline base64 URLs for <=16k images, direct URLs for the rest
+        // inline base64 URLs for <=8k images, direct URLs for the rest
         // the url-loader uses DataUrls.
         // the file-loader emits files.
         {

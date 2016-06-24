@@ -1,21 +1,11 @@
+@charset "UTF-8";
 
-// Default Application Palette (duplicated for visual inspection of colors in IDEA).
-$_mdlapp-text-color-primary:      rgba(#000000, 0.87) !default;  // text color on content (paper/card) background
-$_mdlapp-text-color-secondary:    rgba(#000000, 0.54) !default;  // text color on content (paper/card) background
-$_mdlapp-text-color-disabled:     rgba(#000000, 0.38) !default;  // disabled text, hint text, and icons
-$_mdlapp-divider-color:           rgba(#000000, 0.12) !default;  // -> $card-border-color
-$_mdlapp-color-primary:           #2196F3 !default;
-$_mdlapp-color-primary-dark:      #1976D2 !default;
-$_mdlapp-color-primary-contrast:  #FFFFFF !default;  // text color on primary/primary dark background
-$_mdlapp-color-accent:            #607D8B !default;
-$_mdlapp-color-accent-contrast:   #FFFFFF !default;
-
-$mdlapp-text-color-primary:       "0,0,0";
-$mdlapp-color-primary:            "33,150,243";
-$mdlapp-color-primary-dark:       "25,118,210";
-$mdlapp-color-primary-contrast:   "255,255,255";
-$mdlapp-color-accent:             "96,125,139";
-$mdlapp-color-accent-contrast:    "255,255,255";
+$mdlapp-text-color-primary:       hex-to-rgb-string(#000000); // "0,0,0";
+$mdlapp-color-primary:            hex-to-rgb-string(#2196F3); // "33,150,243";
+$mdlapp-color-primary-dark:       hex-to-rgb-string(#1976D2); // "25,118,210";
+$mdlapp-color-primary-contrast:   hex-to-rgb-string(#FFFFFF); // "255,255,255";
+$mdlapp-color-accent:             hex-to-rgb-string(#607D8B); // "96,125,139";
+$mdlapp-color-accent-contrast:    hex-to-rgb-string(#FFFFFF); // "255,255,255";
 
 /* -----------------------------------------------
  * Override Material Design Lite variables
@@ -33,7 +23,6 @@ $mdlapp-color-accent-contrast:    "255,255,255";
    widely available.
 */
 $preferred_font: 'Roboto', 'Helvetica', 'Arial', sans-serif;
-//$preferred_font: "Times New Roman", Times,'Helvetica', 'Arial', sans-serif;
 $performance_font: 'Helvetica', 'Arial', sans-serif;
 
 /* ==========  IMAGES  ========== */
@@ -50,7 +39,7 @@ $color-accent-contrast: $mdlapp-color-accent-contrast;
 // We use the following default color styles: text-color-primary and
 // text-color-secondary. For light themes, use text-color-primary-inverse
 // and text-color-secondary-inverse.
-$text-color-primary: unquote("rgba(#{$mdlapp-text-color-primary}, 0.87)");
+$text-color-primary: rgba(rgb-string-to-hex($mdlapp-text-color-primary), 0.87);
 $text-link-color: unquote("rgb(#{$color-accent})");
 
 
