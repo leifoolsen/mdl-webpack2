@@ -1,12 +1,5 @@
 @charset "UTF-8";
 
-$mdlapp-text-color-primary:       hex-to-rgb-string(#000000); // "0,0,0";
-$mdlapp-color-primary:            hex-to-rgb-string(#2196F3); // "33,150,243";
-$mdlapp-color-primary-dark:       hex-to-rgb-string(#1976D2); // "25,118,210";
-$mdlapp-color-primary-contrast:   hex-to-rgb-string(#FFFFFF); // "255,255,255";
-$mdlapp-color-accent:             hex-to-rgb-string(#607D8B); // "96,125,139";
-$mdlapp-color-accent-contrast:    hex-to-rgb-string(#FFFFFF); // "255,255,255";
-
 /* -----------------------------------------------
  * Override Material Design Lite variables
  * ----------------------------------------------- */
@@ -28,18 +21,18 @@ $performance_font: 'Helvetica', 'Arial', sans-serif;
 /* ==========  IMAGES  ========== */
 
 /* ==========  Color & Themes  ========== */
-$color-primary: $mdlapp-color-primary;
-$color-primary-dark: $mdlapp-color-primary-dark;
-$color-accent: $mdlapp-color-accent;
-$color-primary-contrast: $mdlapp-color-primary-contrast;
-$color-accent-contrast: $mdlapp-color-accent-contrast;
+$color-primary:          hex-to-rgb-string(#2196F3); // "33,150,243";
+$color-primary-dark:     hex-to-rgb-string(#1976D2); // "25,118,210";
+$color-primary-contrast: hex-to-rgb-string(#FFFFFF); // "255,255,255";;
+$color-accent:           hex-to-rgb-string(#607D8B); // "96,125,139";
+$color-accent-contrast:  hex-to-rgb-string(#FFFFFF); // "255,255,255";
 
 
 /* ==========  Typography  ========== */
 // We use the following default color styles: text-color-primary and
 // text-color-secondary. For light themes, use text-color-primary-inverse
 // and text-color-secondary-inverse.
-$text-color-primary: rgba(rgb-string-to-hex($mdlapp-text-color-primary), 0.87);
+$text-color-primary: rgba(#000000, 0.87);
 $text-link-color: unquote("rgb(#{$color-accent})");
 
 

@@ -4,24 +4,33 @@
   "description": "Trying out webpack2",
   "author": "Leif Olsen <leif.o.olsen.at.gmail.com> (https://github.com/leifoolsen)",
   "private": true,
+  "main": "webpack.config.babel.js",
   "scripts": {
+    "setup": "npm install && npm run validate",
     "validate": "npm-run-all --parallel validate-webpack:* lint test --serial check-coverage",
     "validate-webpack:dev": "./node_modules/.bin/webpack-validator webpack.config.babel.js --env.dev",
     "validate-webpack:prod": "./node_modules/.bin/webpack-validator webpack.config.babel.js --env.prod",
     "clean-dist": "./node_modules/.bin/rimraf dist",
     "copy-files": "./node_modules/.bin/cpy src/favicon.png dist",
     "clean-and-copy": "npm run clean-dist && npm run copy-files",
-    "prestart": "npm run clean-and-copy",
-    "start": "./node_modules/.bin/webpack-dev-server --env.dev --port 8084 --content-base src",
     "prebuild": "npm run clean-and-copy",
     "prebuild:prod": "npm run clean-and-copy",
     "build": "./node_modules/.bin/webpack  --env.dev",
     "build:prod": "./node_modules/.bin/webpack --env.prod",
-    "lint": "./node_modules/.bin/eslint .",
-    "setup": "npm install && npm run validate"
+    "lint": "./node_modules/.bin/eslint ./src",
+    "check-coverage": "echo \"Warn: no coverage specified\"",
+    "test": "./node_modules/.bin/mocha  --opts ./mocha.opts './test/**/*.spec.js'",
+    "test:watch": "./node_modules/.bin/mocha  -w --opts ./mocha.opts './test/**/*.spec.js'",
+    "prestart": "npm run clean-and-copy",
+    "start": "./node_modules/.bin/webpack-dev-server --env.dev --port 8084 --content-base src"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "opt --in pre-commit --exec \"npm run validate\""
+    }
   },
   "engines": {
-    "node": ">= 6"
+    "node": ">=5.5"
   },
   "dependencies": {
     "eq.js": "1.9.0",
@@ -29,12 +38,12 @@
     "mdl-ext": "0.9.12"
   },
   "devDependencies": {
-    "babel": "6.5.2",
     "babel-cli": "6.10.1",
     "babel-core": "6.10.4",
     "babel-eslint": "6.1.0",
     "babel-loader": "6.2.4",
     "babel-plugin-__coverage__": "11.0.0",
+    "babel-polyfill": "6.9.1",
     "babel-preset-es2015-webpack": "6.4.1",
     "babel-preset-stage-0": "6.5.0",
     "chai": "3.5.0",
@@ -46,7 +55,10 @@
     "file-loader": "0.9.0",
     "ghooks": "1.2.4",
     "html-webpack-plugin": "2.21.0",
+    "ignore-styles": "4.0.0",
     "imports-loader": "0.6.5",
+    "jsdom": "9.2.1",
+    "jsdomify": "2.1.0",
     "material-design-icons": "2.2.3",
     "mocha": "2.5.3",
     "node-sass": "3.8.0",
@@ -62,11 +74,6 @@
     "webpack": "2.1.0-beta.13",
     "webpack-dev-server": "2.1.0-beta.0",
     "webpack-validator": "2.2.0"
-  },
-  "config": {
-    "ghooks": {
-      "pre-commit": "opt --in pre-commit --exec \"npm run validate\""
-    }
   },
   "keywords": [
     "webpack2"

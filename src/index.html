@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" data-framework="javascript">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <title>Material Design Lite with Webpack2</title>
-    <link rel="shortcut icon" href="/favicon.png">
+  <title>Material Design Lite with Webpack2</title>
+  <link rel="shortcut icon" href="/favicon.png">
 
-    <!-- styles -->
-  </head>
+  <!-- styles -->
+</head>
+<body>
 
-  <body>
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
 
-    <header id="app-header" class="mdl-layout__header mdlext-layout__sticky-header mdlext-js-sticky-header">
+    <header id="header" class="mdl-layout__header mdlext-layout__sticky-header mdlext-js-sticky-header">
 
       <div class="mdl-layout__header-row">
 
@@ -31,23 +31,13 @@
             <i class="material-icons">home</i>
           </a>
         </label>
-
-        <button id="header-menu" class="mdl-button mdl-js-button mdl-button--icon">
-          <i class="material-icons">more_vert</i>
-        </button>
-        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="header-menu">
-          <li class="mdl-menu__item">Some Action</li>
-          <li class="mdl-menu__item">Another Action</li>
-          <li disabled="" class="mdl-menu__item">Disabled Action</li>
-          <li class="mdl-menu__item">Yet Another Action</li>
-        </ul>
       </div>
 
     </header>
 
-    <aside id="app-drawer" class="mdl-layout__drawer">
+    <aside id="drawer" class="mdl-layout__drawer">
 
-      <ul id="demo-drawer-accordion" class="mdlext-accordion mdlext-accordion--vertical mdlext-js-accordion mdlext-js-accordion mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events" aria-multiselectable="false">
+      <ul class="mdlext-accordion mdlext-accordion--vertical mdlext-js-accordion mdlext-js-accordion mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events" aria-multiselectable="false">
         <li class="mdlext-accordion__panel" open="">
           <header class="mdlext-accordion__panel__header">
             <a href="#" class="mdlext-accordion__panel__header__tabstop"></a>
@@ -58,8 +48,8 @@
           </header>
           <section class="mdlext-accordion__panel__content">
             <nav class="mdl-navigation">
-              <a class="mdl-navigation__link" href="#">Menu Item 1</a>
-              <a class="mdl-navigation__link" href="#">Menu Item 2</a>
+              <a class="mdl-navigation__link" href="/hello.html">Fetch fragment</a>
+              <a class="mdl-navigation__link" href="/foobar.html">Menu Item 2</a>
             </nav>
           </section>
         </li>
@@ -81,191 +71,13 @@
       </ul>
     </aside>
 
-    <main id="mount" class="mdl-layout__content" style="padding-left: 8px; padding-right: 8px;">
+    <main id="content" class="mdl-layout__content" style="padding-left: 8px; padding-right: 8px;">
 
-
-    <h2>It Works</h2>
-
-
-
-
-
-      <style>
-
-        .demo-card-grid table.info {
-          width: 100%
-        }
-        .demo-card-grid table.info th {
-          padding-right: 40px;
-          vertical-align: middle;
-          text-align: left;
-          width: 30%;
-        }
-        .demo-card-grid section {
-          margin: 0 16px;
-        }
-
-        .mdl-card {
-          width: auto;
-        }
-        .mdl-card__media {
-          margin: 0;
-          text-align: center;
-        }
-        .mdl-card__media > img {
-          max-width: 100%;
-          height: auto;
-        }
-        .mdl-card__supporting-text {
-          width: auto;
-        }
-        .mdl-card__actions {
-          display: flex;
-        }
-      </style>
-
-
-      <div class="mdl-grid demo-card-grid" style="margin-bottom: 32px;">
-
-        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdlext-light-color-theme">
-          <div class="mdl-card mdl-shadow--2dp">
-            <header class="mdl-card__title mdl-color--primary mdl-color-text--primary-contrast">
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                <i class="material-icons">view_headline</i>
-              </button>
-              <h2 class="mdl-card__title-text">Light Theme</h2>
-              <div class="mdl-layout-spacer"></div>
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                <i class="material-icons">share</i>
-              </button>
-            </header>
-            <figure class="mdl-card__media">
-              <img src="/assets/images/_DSC7535-2.jpg" alt="">
-            </figure>
-            <section style="margin-top:16px">
-              <table class="info">
-                <tr>
-                  <th class="mdl-typography--caption-color-contrast">primary-dark</th>
-                  <td class="mdl-color--primary-dark mdl-color-text--primary-contrast">primary dark</td>
-                </tr>
-                <tr>
-                  <th class="mdl-typography--caption-color-contrast">primary</th>
-                  <td class="mdl-color--primary mdl-color-text--primary-contrast">primary</td>
-                </tr>
-                <tr>
-                  <th class="mdl-typography--caption-color-contrast">accent</th>
-                  <td class="mdl-color--accent mdl-color-text--accent-contrast">accent</td>
-                </tr>
-                <tr>
-                  <th class="mdl-typography--caption-color-contrast">primary-dark</th>
-                  <td class="mdl-color--primary-contrast mdl-color-text--primary-dark">primary dark, inverted</td>
-                </tr>
-                <tr>
-                  <th class="mdl-typography--caption-color-contrast">primary</th>
-                  <td class="mdl-color--primary-contrast mdl-color-text--primary">primary, inverted</td>
-                </tr>
-                <tr>
-                  <th class="mdl-typography--caption-color-contrast">accent</th>
-                  <td class="mdl-color--accent-contrast mdl-color-text--accent">accent, inverted</td>
-                </tr>
-              </table>
-            </section>
-
-            <div class="mdl-card__supporting-text">
-              Card Supporting Text
-            </div>
-
-            <footer class="mdl-card__actions mdl-card--border">
-              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Read more
-              </a>
-              <div class="mdl-layout-spacer"></div>
-              <button class="mdl-button mdl-button--icon"><i class="material-icons">radio</i></button>
-              <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
-              <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
-            </footer>
-          </div>
-
-        </div>
-
-
-        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
-
-          <div class="mdl-card mdl-shadow--2dp mdlext-dark-color-theme">
-            <header class="mdl-card__title mdl-color--primary mdl-color-text--primary-contrast">
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                <i class="material-icons">view_headline</i>
-              </button>
-              <h2 class="mdl-card__title-text">Dark Theme</h2>
-              <div class="mdl-layout-spacer"></div>
-              <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                <i class="material-icons">share</i>
-              </button>
-            </header>
-            <figure class="mdl-card__media">
-              <img src="/assets/images/_DSC7535-2.jpg" alt="">
-            </figure>
-            <section style="margin-top:16px">
-              <table class="info">
-                <tr>
-                  <th class="mdl-typography--caption-color-contrast">primary-dark</th>
-                  <td class="mdl-color--primary-dark mdl-color-text--primary-contrast">primary dark</td>
-                </tr>
-                <tr>
-                  <th class="mdl-typography--caption-color-contrast">primary</th>
-                  <td class="mdl-color--primary mdl-color-text--primary-contrast">primary</td>
-                </tr>
-                <tr>
-                  <th class="mdl-typography--caption-color-contrast">accent</th>
-                  <td class="mdl-color--accent mdl-color-text--accent-contrast">accent</td>
-                </tr>
-                <tr>
-                  <th class="mdl-typography--caption-color-contrast">primary-dark</th>
-                  <td class="mdl-color--primary-contrast mdl-color-text--primary-dark">primary dark, inverted</td>
-                </tr>
-                <tr>
-                  <th class="mdl-typography--caption-color-contrast">primary</th>
-                  <td class="mdl-color--primary-contrast mdl-color-text--primary">primary, inverted</td>
-                </tr>
-                <tr>
-                  <th class="mdl-typography--caption-color-contrast">accent</th>
-                  <td class="mdl-color--accent-contrast mdl-color-text--accent">accent, inverted</td>
-                </tr>
-              </table>
-            </section>
-
-            <div class="mdl-card__supporting-text">
-              Card Supporting Text
-            </div>
-
-            <footer class="mdl-card__actions mdl-card--border">
-              <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                Read more
-              </a>
-              <div class="mdl-layout-spacer"></div>
-              <button class="mdl-button mdl-button--icon"><i class="material-icons">radio</i></button>
-              <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
-              <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
-            </footer>
-          </div>
-
-        </div>
-
-      </div>
-
-
-
-
-
-
-
-
-
-
+      <h1>It Works</h1>
 
     </main>
 
   </div>
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-  </body>
+</body>
 </html>
