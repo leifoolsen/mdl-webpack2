@@ -64,7 +64,7 @@ class Content {
       window.setTimeout( () => {
         // ... or use MutationObserver?
         eqjs.all(false);
-      }, 40);
+      }, 50);
     };
 
     // For now, only possible to load one fragment per page

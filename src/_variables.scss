@@ -1,5 +1,19 @@
 @charset "UTF-8";
 
+// Get rid og MDL "unquote" hell
+$app-color-primary:          #2196F3;
+$app-color-primary-dark:     #1976D2;
+$app-color-primary-contrast: #FFFFFF;
+$app-color-accent:           #607D8B;
+$app-color-accent-contrast:  #FFFFFF;
+
+$app-text-color-primary:     rgba(#000000, 0.87) !default; // text color on content (paper/card) background
+$app-text-color-secondary:   rgba(#000000, 0.54) !default; // text color on content (paper/card) background
+$app-text-color-disabled:    rgba(#000000, 0.38) !default; // disabled text, hint text, and icons
+$app-divider-color:          rgba(#000000, 0.12) !default; // -> $card-border-color
+$app-error-color:            rgb(213, 0, 0) !default;
+
+
 /* -----------------------------------------------
  * Override Material Design Lite variables
  * ----------------------------------------------- */
@@ -21,19 +35,19 @@ $performance_font: 'Helvetica', 'Arial', sans-serif;
 /* ==========  IMAGES  ========== */
 
 /* ==========  Color & Themes  ========== */
-$color-primary:          hex-to-rgb-string(#2196F3); // "33,150,243";
-$color-primary-dark:     hex-to-rgb-string(#1976D2); // "25,118,210";
-$color-primary-contrast: hex-to-rgb-string(#FFFFFF); // "255,255,255";;
-$color-accent:           hex-to-rgb-string(#607D8B); // "96,125,139";
-$color-accent-contrast:  hex-to-rgb-string(#FFFFFF); // "255,255,255";
+$color-primary:          hex-to-rgb-string($app-color-primary);
+$color-primary-dark:     hex-to-rgb-string($app-color-primary-dark);
+$color-primary-contrast: hex-to-rgb-string($app-color-primary-contrast);
+$color-accent:           hex-to-rgb-string($app-color-accent);
+$color-accent-contrast:  hex-to-rgb-string($app-color-accent-contrast);
 
 
 /* ==========  Typography  ========== */
 // We use the following default color styles: text-color-primary and
 // text-color-secondary. For light themes, use text-color-primary-inverse
 // and text-color-secondary-inverse.
-$text-color-primary: rgba(#000000, 0.87);
-$text-link-color: unquote("rgb(#{$color-accent})");
+$text-color-primary: $app-text-color-primary;
+$text-link-color: $app-color-accent;
 
 
 /* ==========  Components  ========== */
@@ -41,11 +55,11 @@ $text-link-color: unquote("rgb(#{$color-accent})");
 /* ==========  Standard Buttons  ========== */
 
 /* ==========  Icon Toggles  ========== */
-$icon-toggle-checked-color: unquote("rgb(#{$color-accent})");
-$icon-toggle-checked-focus-color: unquote("rgba(#{$color-accent}, 0.26)");
+$icon-toggle-checked-color: $app-color-accent;
+$icon-toggle-checked-focus-color: rgba($app-color-accent, 0.26);
 
 /* ==========  Radio Buttons  ========== */
-$radio-color: unquote("rgb(#{$color-accent})");
+$radio-color: $app-color-accent;
 
 /* ==========  Ripple effect  ========== */
 
@@ -54,7 +68,7 @@ $radio-color: unquote("rgb(#{$color-accent})");
 
 // Drawer
 $layout-drawer-navigation-link-active-background: rgba(0, 0, 0, 0.25);
-$layout-drawer-navigation-link-active-color: unquote("rgb(#{$color-primary-dark})");
+$layout-drawer-navigation-link-active-color: $app-color-primary-dark;
 
 // Header
 $layout-header-text-color: rgba(0, 0, 0, 0.9);
@@ -63,20 +77,20 @@ $layout-header-text-color: rgba(0, 0, 0, 0.9);
 /* ==========  Content Tabs  ========== */
 
 /* ==========  Checkboxes  ========== */
-$checkbox-color: unquote("rgb(#{$color-accent})");
-$checkbox-focus-color: unquote("rgba(#{$color-accent}, 0.26)");
+$checkbox-color: $app-color-accent;
+$checkbox-focus-color: rgba($app-color-accent, 0.26);
 
 /* ==========  Switches  ========== */
-$switch-color: unquote("rgb(#{$color-accent})");
-$switch-faded-color: unquote("rgba(#{$color-accent}, 0.26)");
+$switch-color: $app-color-accent;
+$switch-faded-color: rgba($app-color-accent, 0.26);
 $switch-thumb-color: $switch-color;
-$switch-track-color: unquote("rgba(#{$color-accent}, 0.5)");
+$switch-track-color: rgba($app-color-accent, 0.5);
 
 
 /* ==========  Spinner  ========== */
 
 /* ==========  Text fields  ========== */
-$input-text-highlight-color: unquote("rgb(#{$color-accent})");
+$input-text-highlight-color: $app-color-accent;
 
 /* ==========  Card  ========== */
 $card-image-placeholder-color: rgba(255, 255, 255, 0);
@@ -85,13 +99,13 @@ $card-image-placeholder-color: rgba(255, 255, 255, 0);
 // Other text colors are inherited
 
 /* ==========  Sliders ========== */
-$range-color: unquote("rgb(#{$color-accent})");
-$range-faded-color: unquote("rgba(#{$color-accent}, 0.26)");
+$range-color: $app-color-accent;
+$range-faded-color: rgba($app-color-accent, 0.26);
 
 /* ========== Progress ========== */
-$progress-main-color: unquote("rgb(#{$color-accent})");
-$progress-secondary-color: unquote("rgba(#{$color-accent-contrast}, 0.7)");
-$progress-fallback-buffer-color: unquote("rgba(#{$color-accent-contrast}, 0.9)");
+$progress-main-color: $app-color-accent;
+$progress-secondary-color: rgba($app-color-accent-contrast, 0.7);
+$progress-fallback-buffer-color: rgba($app-color-accent-contrast, 0.9);
 
 /* ==========  List ========== */
 
