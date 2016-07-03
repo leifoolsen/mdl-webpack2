@@ -57,10 +57,10 @@
         }
       }
 
-      .mdlext-accordion__panel__state:after {
+      .mdlext-accordion__panel__state::after {
         content: 'expand_more';
       }
-      &[open] .mdlext-accordion__panel__state:after {
+      &[open] .mdlext-accordion__panel__state::after {
         content: 'expand_less';
       }
 

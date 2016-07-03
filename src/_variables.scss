@@ -19,6 +19,7 @@ $app-error-color:            rgb(213, 0, 0) !default;
  * ----------------------------------------------- */
 
 /* ==========  TYPOGRAPHY  ========== */
+
 /* We're splitting fonts into "preferred" and "performance" in order to optimize
    page loading. For important text, such as the body, we want it to load
    immediately and not wait for the web font load, whereas for other sections,
@@ -151,6 +152,7 @@ $layout-header-desktop-indent: 16px;
 $checkbox-button-size: 18px;
 
 /* CARD */
+
 /* Card dimensions */
 $card-height: auto;
 $card-width: auto;
@@ -209,7 +211,7 @@ $mdlext-light-color-accent-contrast:  #FFFFFF;
 
 $mdlext-dark-color-primary:           #212121;
 $mdlext-dark-color-primary-dark:      #000000;
-$mdlext-dark-color-primary-light:     rgb(30,136,229);  // Fallback color. Set to color-primary if fallback is not needed
+$mdlext-dark-color-primary-light:     rgb(30, 136, 229);  // Fallback color. Set to color-primary if fallback is not needed
 $mdlext-dark-color-primary-contrast:  #FFFFFF;  // text color on primary/primary dark background
 $mdlext-dark-color-accent:            #FFC107;
 $mdlext-dark-color-accent-light:      #FFC107;  // Fallback color. Set to color-accent if fallback is not needed

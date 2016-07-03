@@ -1,8 +1,11 @@
 const webpack = require('webpack');
 const {resolve} = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require('autoprefixer');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 module.exports = env => {
 
@@ -56,12 +59,12 @@ module.exports = env => {
           exclude: /node_modules/
         },
         {
-          test: /\.scss$/,
-          loader: ExtractTextPlugin.extract('style-loader', sass_)
-        },
-        {
           test: /\.css$/,
           loader: ExtractTextPlugin.extract('style-loader', css_)
+        },
+        {
+          test: /\.s(a|c)ss$/,
+          loader: ExtractTextPlugin.extract('style-loader', sass_)
         },
         // Images
         // inline base64 URLs for <=8k images, direct URLs for the rest
@@ -81,6 +84,10 @@ module.exports = env => {
         { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'url-loader?limit=100000&minetype=application/font-woff' },
         { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: 'file-loader?limit=100000' }
       ]
+    },
+    eslint: {
+      failOnWarning: false,
+      failOnError: true
     },
     sassLoader: {
       includePaths: [
@@ -107,6 +114,20 @@ module.exports = env => {
         disable: false,
         allChunks: true
       }),
+
+      new StyleLintPlugin({
+        // http://stylelint.io/user-guide/example-config/
+        configFile: '.stylelintrc',
+        context: 'src',
+        files: '**/*.s?(a|c)ss',
+        syntax: 'scss',
+        failOnError: true
+      }),
+
+      new CopyWebpackPlugin([
+        { from: 'favicon.png' },
+        { from: 'assets' }
+      ]),
 
       ifProd(new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor'

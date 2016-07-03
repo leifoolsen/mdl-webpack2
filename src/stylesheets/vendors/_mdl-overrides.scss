@@ -16,9 +16,11 @@
     height: auto;
   }
 }
+
 .mdl-card__supporting-text {
   width: auto;
 }
+
 .mdl-card__actions {
   display: flex;
 }
@@ -46,7 +48,9 @@
   tr:last-child td {
     border: none;
   }
-  td, th {
+
+  td,
+  th {
     &:first-of-type {
       padding-left: 16px;
     }
@@ -73,8 +77,8 @@
     margin: 0;
     padding-right: 8px;
   }
-
 }
+
 .mdl-mini-footer--link-list,
 .mdl-mini-footer__link-list {
 
@@ -89,12 +93,14 @@
     }
   }
 }
+
 .mdl-mini-footer--left-section,
 .mdl-mini-footer__left-section {
   display: flex;
   flex: 1;
   align-items: center;
 }
+
 .mdl-mini-footer--right-section,
 .mdl-mini-footer__right-section {
   display: flex;
@@ -113,8 +119,6 @@
 // ---------------------------------------------
 // material-design-lite/src/layout/_layout.scss
 // ---------------------------------------------
-.mdl-layout {
-}
 
 // Drawer.
 .mdl-layout__drawer {
@@ -149,9 +153,10 @@
   // Mozilla, remove focusring
   &:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 #000;
+    text-shadow: 0 0 0 #000000;
   }
 }
+
 .mdl-layout__content {
   // Change the layout__content class to Flex (instead of inline-block) to allow spacer to work.
   // See: https://github.com/google/material-design-lite/issues/913
