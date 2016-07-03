@@ -11,7 +11,7 @@
     "validate-webpack:dev": "./node_modules/.bin/webpack-validator webpack.config.babel.js --env.dev",
     "validate-webpack:prod": "./node_modules/.bin/webpack-validator webpack.config.babel.js --env.prod",
     "clean": "./node_modules/.bin/rimraf dist",
-    "prebuild": "npm run clean && npm run check-coverage",
+    "prebuild": "npm run clean && npm run test:coverage && npm run check-coverage",
     "build": "./node_modules/.bin/webpack --env.dev",
     "prebuild:prod": "npm run clean && npm run validate",
     "build:prod": "./node_modules/.bin/webpack --env.prod",
