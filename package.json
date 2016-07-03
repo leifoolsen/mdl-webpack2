@@ -1,7 +1,7 @@
 {
-  "name": "webpack2",
+  "name": "mdl-webpack2",
   "version": "0.0.1",
-  "description": "Trying out webpack2",
+  "description": "A Google Material Design Lite project built with NPM and Webpack2 using SASS and EcmaScript 2015/2016.",
   "author": "Leif Olsen <leif.o.olsen.at.gmail.com> (https://github.com/leifoolsen)",
   "private": true,
   "main": "webpack.config.babel.js",
