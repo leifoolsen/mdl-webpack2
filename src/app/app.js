@@ -59,12 +59,6 @@ class Content {
     const appendNewContent = text => {
       this.element_.insertAdjacentHTML('afterbegin', text);
       [...this.element_.querySelectorAll('script')].forEach( script => eval(script.innerHTML) );
-      componentHandler.upgradeElements(this.element_);
-
-      window.setTimeout( () => {
-        // ... or use MutationObserver?
-        eqjs.all(false);
-      }, 50);
     };
 
     // For now, only possible to load one fragment per page
@@ -89,12 +83,37 @@ class Content {
   }
 }
 
+const MutationObserver = window.MutationObserver
+  || window.WebKitMutationObserver || window.MozMutationObserver;
+
+const listenToDomInsertions = content => {
+  new MutationObserver( mutations => {
+    let callEqjs = false;
+    for ( const mutation of mutations ) {
+      if (mutation.addedNodes.length > 0) {
+        console.log('***** Upgrading ', mutation.addedNodes.length, ' nodes');
+        callEqjs = true;
+        componentHandler.upgradeElements(mutation.addedNodes);
+      }
+    }
+    if(callEqjs) {
+      window.setTimeout( () => eqjs.all(false), 0);
+    }
+  }).observe( content, {
+    attributes: false,
+    childList: true,
+    characterData: false,
+    subtree: true
+  });
+};
+
 class App {
   constructor() {
     this.drawer_ = new Drawer();
     this.content_ = new Content();
 
     this.drawer_.element.addEventListener('select', event => this.content_.loadContent(event.detail.url));
+    listenToDomInsertions(document.querySelector('.mdl-layout__content'));
   }
   run() {
     console.info('***** Application started');
