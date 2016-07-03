@@ -1,4 +1,32 @@
-@charset "UTF-8";
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+// -----------------------------------------------------------------------------
+// SASS 7-1 section start
+// -----------------------------------------------------------------------------
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+/// @see {mixin} respond-to
+$breakpoints: (
+  'small': (min-width: 320px),
+  'medium': (min-width: 768px),
+  'large': (min-width: 1024px),
+) !default;
+
+
+
+// -----------------------------------------------------------------------------
+// MDL / MDLEXT section start
+// -----------------------------------------------------------------------------
 
 // Get rid og MDL "unquote" hell
 $app-color-primary:          #2196F3;
@@ -216,3 +244,7 @@ $mdlext-dark-color-primary-contrast:  #FFFFFF;  // text color on primary/primary
 $mdlext-dark-color-accent:            #FFC107;
 $mdlext-dark-color-accent-light:      #FFC107;  // Fallback color. Set to color-accent if fallback is not needed
 $mdlext-dark-color-accent-contrast:   #FFFFFF;
+
+// -----------------------------------------------------------------------------
+// MDL / MDLEXT section end
+// -----------------------------------------------------------------------------

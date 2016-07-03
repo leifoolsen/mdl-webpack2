@@ -9,43 +9,48 @@
 // and let Webpack do the path resolving.
 // ------------------------------------------------------------------------------------------------------
 
-// ------------------------------------------------------------------------------------------------------
-// Override Material Design Icons variables
+//// 1. Configuration and helpers
+
+// Material Design Icons path
 // A list of available icon font names can be found here: https://www.google.com/design/icons/
-// ------------------------------------------------------------------------------------------------------
-$material-design-iconfont-path: '../node_modules/material-design-icons/iconfont';
+$material-design-iconfont-path: '~material-design-icons/iconfont';
 
-// ------------------------------------------------------------------------------------------------------
-// Override Material Design Iconic Font variables
-// ------------------------------------------------------------------------------------------------------
+// Material Design Iconic Font path
 // A list of available icons can be found here: http://zavoloklom.github.io/material-design-iconic-font/
-$zmdi-font-path : '../node_modules/material-design-iconic-font/dist/fonts';
+$zmdi-font-path : '~material-design-iconic-font/dist/fonts';
 
-/* ==========  IMAGES  ========== */
-$image_path: '../node_modules/material-design-lite/src/images';
+// Material Design Light image path
+$image_path: '~material-design-lite/src/images';
 
+// Relative or absolute URL where all assets are served from
+// @type String
+// @example scss - When using a CDN
+//   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
 
-// 1. Configuration and helpers
-@import "~mdl-ext/src/functions";
-@import 'variables';
+@import '~mdl-ext/src/functions';
+@import 'stylesheets/abstracts/variables';
+@import 'stylesheets/abstracts/functions';
+@import 'stylesheets/abstracts/mixins';
 
-// 2. Vendors
+//// 2. Vendors
 @import '~material-design-icons/iconfont/material-icons.css';
 @import '~roboto-fontface/css/roboto/roboto-fontface.css';
 @import '~material-design-lite/src/material-design-lite';
 @import '~eq.js/sass/eq';
 @import '~mdl-ext/src/mdl-ext-eqjs';
-@import 'stylesheets/vendors/material-icons-overrides';
-@import 'stylesheets/vendors/mdl-overrides';
+@import 'stylesheets/vendor/material-icons-overrides';
+@import 'stylesheets/vendor/mdl-overrides';
 
-// 3. Base stuff
+//// 3. Base stuff
 @import 'stylesheets/base/base';
+@import 'stylesheets/base/helpers';
 
-// 4. Internal Components
+//// 4. Internal Components
 
-// 5. Layout-related sections
+//// 5. Layout-related sections
 @import 'stylesheets/layout/layout';
 
-// 6. Page-specific styles
+//// 6. Page-specific styles
 
-// 7. Themes
+//// 7. Themes
