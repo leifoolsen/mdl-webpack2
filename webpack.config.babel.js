@@ -40,7 +40,7 @@ module.exports = env => {
       ]
     },
     output: {
-      filename: 'bundle.[name].[chunkhash].js',
+      filename: 'bundle.[name].[hash].js',
       path: resolve(__dirname, 'dist'),
       pathinfo: !env.prod
     },
