@@ -9,20 +9,12 @@
     background-color: #FFFFFF;
   }
 
+  .mdl-navigation {
+    padding: 0;
+  }
+
   .mdl-navigation a.mdl-navigation__link {
     padding-right: 0;
-
-    i,
-    img {
-      width: 32px;
-      margin-right: 8px;
-      margin-top: -8px;
-      margin-bottom: -8px;
-      margin-left: 0;
-    }
-    i {
-      text-indent: -2px;
-    }
   }
 
   .mdl-navigation a.mdl-navigation__link {
@@ -31,61 +23,34 @@
   }
 
   .mdlext-accordion {
+    height: 100%;
 
     &__panel {
-      &__header {
-        &__transform {
-          img {
-            width: 32px;
-          }
-        }
-      }
-      &:nth-child(1) {
+
+      &:first-child .mdlext-accordion__tab {
         height: $layout-desktop-header-height;
+        min-height: $layout-desktop-header-height;
+        min-width: $layout-desktop-header-height;
 
-        .mdlext-accordion__panel__header {
-          height: $layout-desktop-header-height;
-          min-height: $layout-desktop-header-height;
-
-          &__transform {
-            height: $layout-desktop-header-height;
-
-            img {
-              margin-top: -8px;
-            }
-          }
+        &__caption {
+          font-size: 20px;
         }
       }
-
-      .mdlext-accordion__panel__state::after {
-        content: 'expand_more';
+      &__tab {
+        &__caption {
+          font-size: 16px;
+        }
       }
-      &[open] .mdlext-accordion__panel__state::after {
-        content: 'expand_less';
+      .mdlext-accordion__tabpanel {
+        padding: 0;
       }
-
-    }
-
-    .mdlext-accordion__panel__content {
-      padding: 0;
     }
   }
 
 }
 
-.is-small-screen #drawer .mdlext-accordion {
-
-  .mdlext-accordion__panel:nth-child(1) {
-    height: $layout-mobile-header-height;
-
-    .mdlext-accordion__panel__header {
-      height: $layout-mobile-header-height;
-      min-height: $layout-mobile-header-height;
-
-      &__transform {
-        height: $layout-mobile-header-height;
-      }
-    }
-  }
+.is-small-screen #drawer .mdlext-accordion__panel:first-child .mdlext-accordion__tab {
+  height: 56px;
+  min-height: 56px;
+  min-width: 56px;
 }
-

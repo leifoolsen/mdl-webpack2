@@ -37,16 +37,13 @@
 
     <aside id="drawer" class="mdl-layout__drawer">
 
-      <ul class="mdlext-accordion mdlext-accordion--vertical mdlext-js-accordion mdlext-js-accordion mdl-js-ripple-effect mdl-js-ripple-effect--ignore-events" aria-multiselectable="false">
-        <li class="mdlext-accordion__panel" open="">
-          <header class="mdlext-accordion__panel__header">
-            <a href="#" class="mdlext-accordion__panel__header__tabstop"></a>
-            <div class="mdlext-accordion__panel__header__transform">
-              <h5>Components</h5>
-              <i class="mdlext-accordion__panel__state material-icons md-24"></i>
-            </div>
+      <ul id="accordion" class="mdlext-accordion mdlext-js-accordion mdlext-accordion--vertical mdlext-js-ripple-effect mdlext-js-animation-effect" aria-multiselectable="false">
+        <li class="mdlext-accordion__panel">
+          <header class="mdlext-accordion__tab" aria-expanded="true">
+            <span class="mdlext-accordion__tab__caption">Components</span>
+            <i class="mdlext-aria-toggle-material-icons"></i>
           </header>
-          <section class="mdlext-accordion__panel__content">
+          <section class="mdlext-accordion__tabpanel">
             <nav class="mdl-navigation">
               <a class="mdl-navigation__link" href="/hello.html">Fetch fragment</a>
               <a class="mdl-navigation__link" href="/foobar.html">Menu Item 2</a>
@@ -54,14 +51,11 @@
           </section>
         </li>
         <li class="mdlext-accordion__panel">
-          <header class="mdlext-accordion__panel__header">
-            <a href="#" class="mdlext-accordion__panel__header__tabstop"></a>
-            <div class="mdlext-accordion__panel__header__transform">
-              <h5>Section II</h5>
-              <i class="mdlext-accordion__panel__state material-icons md-24"></i>
-            </div>
+          <header class="mdlext-accordion__tab">
+            <span class="mdlext-accordion__tab__caption">Section II</span>
+            <i class="mdlext-aria-toggle-material-icons"></i>
           </header>
-          <section class="mdlext-accordion__panel__content">
+          <section class="mdlext-accordion__tabpanel">
             <nav class="mdl-navigation">
               <a class="mdl-navigation__link" href="#">Menu Item I</a>
               <a class="mdl-navigation__link" href="#">Menu Item II</a>
