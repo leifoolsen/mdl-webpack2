@@ -89,6 +89,8 @@ module.exports = env => {
       failOnWarning: false,
       failOnError: true
     },
+    // Note: webpack-validator fails with error: "sassLoader" is not allowed
+    // npm run prebuild and npm run prebuild:prod can not call npm run validate if we add this block
     sassLoader: {
       includePaths: [
         resolve(__dirname, './node_modules'),
