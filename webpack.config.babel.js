@@ -89,8 +89,10 @@ module.exports = env => {
       failOnWarning: false,
       failOnError: true
     },
-    // Note: webpack-validator fails with error: "sassLoader" is not allowed
-    // npm run prebuild and npm run prebuild:prod can not call npm run validate if we add this block
+    // Note: Do not enable if you don't have any SASS files.
+    // webpack-validator will fail with 'error: "sassLoader" is not allowed'
+    // See: http://stackoverflow.com/questions/38381328/webpack-how-to-configure-base-directory-path-for-sass-loader/38791565#38791565
+    // Solution for now: Do not call webpack-validator if you use SASS
     sassLoader: {
       includePaths: [
         resolve(__dirname, './node_modules'),

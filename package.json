@@ -7,7 +7,7 @@
   "main": "webpack.config.babel.js",
   "scripts": {
     "setup": "npm install && npm run validate",
-    "validate": "npm-run-all --parallel validate-webpack:* test:coverage --serial check-coverage",
+    "validate": "npm-run-all --serial test:coverage check-coverage",
     "validate-webpack:dev": "./node_modules/.bin/webpack-validator webpack.config.babel.js --env.dev",
     "validate-webpack:prod": "./node_modules/.bin/webpack-validator webpack.config.babel.js --env.prod",
     "clean": "./node_modules/.bin/rimraf dist",
